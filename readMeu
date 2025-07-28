@@ -2,5 +2,26 @@ python -m venv .venv
 .\.venv\Scripts\activate
 
 pip install flask
+pip install -U Flask-SQLAlchemy
+pip install flask_wtf
+pip install wtforms
 
-flask --app app run --debug
+flask --app mercado run --debug
+
+->  dentro do python
+from mercado import db
+from mercado import app
+from mercado import Item
+app.app_context().push()
+
+item1=Item(nome="xxx"....)
+db.session.add(item1)
+db.session.commit()
+
+Item.query.all()
+
+db.drop_all()
+db.create_all()
+
+import os
+os.urandom(12).hex()
