@@ -5,6 +5,7 @@ pip install flask
 pip install -U Flask-SQLAlchemy
 pip install flask_wtf
 pip install wtforms
+pip install email_validator
 
 flask --app mercado run --debug
 

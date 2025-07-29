@@ -12,6 +12,9 @@
         </h1>
         <br>
         <form method="POST" action="" class="form-register" style="color: whitesmoke;">
+            
+            {{ form.hidden_tag() }}
+            
             {{form.usuario.label()}}
             {{form.usuario(class="form-control", placeholder="Informe o UserName")}}
             <br>
